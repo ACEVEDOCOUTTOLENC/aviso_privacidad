@@ -1,40 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documento con Firma</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Aviso de Privacidad</title>
 </head>
-
 <body>
     <div class="pdf-container">
-        <iframe src="static/terms.pdf" id="pdfIframe" class="style-iframe"></iframe>
-        <input type="text" id="nameInput" class="input-field">
-        <input type="date" id="dateInput" class="input-date">
-
-
-
-        <canvas id="signatureCanvas" class="signature-canvas"></canvas>
-
-        <!-- Modal -->
-            <div class="modal" id="signatureModal">
-                <div class="modal-content">
-                    <canvas class="modal-canvas" id="modalCanvas"></canvas>
-                    <div class="button-container">
-                        <button id="saveSignature">Guardar Firma</button>
-                        <button id="closeModal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="button-container">
-                <button id="submitButton" onclick="submitForm()">ACEPTAR</button>
-            </div>
-       
+        <iframe id="pdfIframe" class="style-iframe" src="static/terms.pdf"></iframe>
     </div>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-</body>
+    <div class="modal" id="privacyModal">
+        <div class="modal-content">
+            <p>He leído el aviso de privacidad</p>
+            <input type="text" id="modalNameInput" placeholder="Ingrese su nombre">
+            <canvas id="modalSignatureCanvas" width="400" height="100" style="border: 1px solid blue;"></canvas>
+            <button id="modalAcceptButton">Aceptar</button>
+            <button id="modalCloseButton">Cerrar</button>
+        </div>
+    </div>
 
+    <script src="static/script.js"></script>
+</body>
 </html>
