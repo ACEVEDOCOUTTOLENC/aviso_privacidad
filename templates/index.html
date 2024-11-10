@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualización de Documento</title>
+    <title>Documento PDF</title>
     <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <div class="document-container">
-        <!-- Encabezado y Botón para aceptar, que se superponen al PDF -->
-        
-        <button id="acceptButton" class="overlay-button">He leído el documento</button>
-        
-        <!-- Iframe para mostrar el PDF -->
-        <iframe src="static/terms.pdf"></iframe>
+    <div class="modal visible" id="pdfModal">
+        <div class="document-container">
+            <iframe src="static/terms.pdf"></iframe>
+            <button class="overlay-button" id="closeButton">Cerrar Documento</button>
+        </div>
     </div>
 
     <script src="static/script.js"></script>
