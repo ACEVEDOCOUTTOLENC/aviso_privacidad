@@ -3,24 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/style.css">
-    <title>Aviso de Privacidad</title>
+    <title>Visualización de Documento</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="pdf-container">
-        <iframe id="pdfIframe" class="style-iframe" src="static/terms.pdf"></iframe>
+    <div class="document-container">
+        <!-- Encabezado y Botón para aceptar, que se superponen al PDF -->
+        
+        <button id="acceptButton" class="overlay-button">He leído el documento</button>
+        
+        <!-- Iframe para mostrar el PDF -->
+        <iframe src="{{ url_for('static', filename='terms.pdf') }}"></iframe>
     </div>
 
-    <div class="modal" id="privacyModal">
-        <div class="modal-content">
-            <p>He leído el aviso de privacidad</p>
-            <input type="text" id="modalNameInput" placeholder="Ingrese su nombre">
-            <canvas id="modalSignatureCanvas" width="400" height="100" style="border: 1px solid blue;"></canvas>
-            <button id="modalAcceptButton">Aceptar</button>
-            <button id="modalCloseButton">Cerrar</button>
-        </div>
-    </div>
-
-    <script src="static/script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
