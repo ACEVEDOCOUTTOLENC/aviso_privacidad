@@ -1,12 +1,14 @@
-html, body {
-    height: 100%;
+
+body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Arial, sans-serif;
-    background-color: #f3f3f3;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .modal {
@@ -29,22 +31,31 @@ html, body {
     opacity: 1;
 }
 
+
 .document-container {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 90%;  
+    max-width: 1000px; 
+    max-height: 99%; 
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: auto;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+.pdf-container {
+    overflow-y: scroll;
+    height: 100%; 
+    padding: 10px;  
 }
 
-iframe {
-    border: none;
+
+.pdf-page {
     width: 100%;
-    height: 100%;
+    margin: 20px 0; 
+    background-color: white; 
 }
+
 
 .overlay-button {
     position: absolute;
@@ -66,26 +77,27 @@ iframe {
     background-color: #45a049;
 }
 
-/* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
     .document-container {
-        width: 100%;
-        height: 100%;
+        width: 95%; 
+        max-width: 95%; 
     }
+
     .overlay-button {
-        font-size: 14px;
-        padding: 8px 15px;
+        padding: 8px 16px; 
+        font-size: 14px; 
     }
 }
 
-/* Ajustes para pantallas muy pequeñas (móviles en orientación vertical) */
+
 @media (max-width: 480px) {
     .document-container {
-        width: 100%;
-        height: 100%;
+        width: 100%; 
+        max-height: 99%; 
     }
+
     .overlay-button {
-        font-size: 12px;
-        padding: 6px 10px;
+        padding: 6px 12px; 
+        font-size: 12px;  
     }
 }

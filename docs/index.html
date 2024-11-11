@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aviso de Privacidad</title>
     <link rel="stylesheet" href="style.css">
-</head>
 <body>
-    <div class="modal visible" id="pdfModal">
+    <div class="modal" id="documentModal">
         <div class="document-container">
-            <iframe src="terms.pdf"></iframe>
-            <button class="overlay-button" id="closeButton">Cerrar Documento</button>
+            <div id="pdf-container" class="pdf-container">
+               
+            </div>
+            <button class="overlay-button" id="closeButton">Acepto el Aviso de Privacidad</button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="script.js"></script> 
 </body>
 </html>
