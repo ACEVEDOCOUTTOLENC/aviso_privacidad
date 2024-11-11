@@ -1,5 +1,5 @@
 // URL del archivo PDF que deseas mostrar
-const url = 'static/terms.pdf';  // Ruta de tu archivo PDF
+const url = 'terms.pdf';  // Ruta de tu archivo PDF
 
 // Obtener el botón de cierre
 const closeButton = document.getElementById('closeButton');
