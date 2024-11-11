@@ -20,7 +20,7 @@ function renderPDF(url) {
                 const context = canvas.getContext('2d');
 
                 // Aumentar la escala para mejorar la resolución
-                const scale = 1.5; // Aumentar el valor de la escala para mejorar la calidad
+                const scale = 2.5; // Aumentar el valor de la escala para mejorar la calidad
                 const viewport = page.getViewport({ scale: scale });
 
                 // Establecer las dimensiones del canvas para cada página
