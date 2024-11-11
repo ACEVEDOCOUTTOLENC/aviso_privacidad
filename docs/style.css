@@ -1,4 +1,4 @@
-
+/* Estilos generales */
 body {
     margin: 0;
     padding: 0;
@@ -11,6 +11,7 @@ body {
     overflow: hidden;
 }
 
+/* Modal con el PDF */
 .modal {
     position: fixed;
     top: 0;
@@ -31,32 +32,34 @@ body {
     opacity: 1;
 }
 
-
+/* Contenedor para el documento PDF */
 .document-container {
     position: relative;
-    width: 90%;  
-    max-width: 1000px; 
-    max-height: 99%; 
+    width: 90%;  /* Usa un 90% del ancho disponible para dispositivos pequeños */
+    max-width: 1000px; /* Limita el tamaño máximo para pantallas grandes */
+    max-height: 99%; /* Limita la altura para que no sobrepase la pantalla */
     background-color: white;
     display: flex;
     flex-direction: column;
-    overflow: auto;  
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    overflow: auto;  /* Permite el desplazamiento si el documento es más grande que la ventana */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para mejorar la apariencia */
 }
+
+/* Contenedor donde se agregan las páginas del PDF */
 .pdf-container {
-    overflow-y: scroll;
-    height: 100%; 
-    padding: 10px;  
+    overflow-y: scroll; /* Permite el desplazamiento vertical */
+    height: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible */
+    padding: 10px;  /* Añade espacio alrededor de las páginas */
 }
 
-
+/* Canvas donde se renderiza cada página del PDF */
 .pdf-page {
     width: 100%;
-    margin: 20px 0; 
-    background-color: white; 
+    margin: 20px 0; /* Espaciado entre las páginas */
+    background-color: white; /* Fondo blanco para cada página */
 }
 
-
+/* Estilo para el botón de cierre */
 .overlay-button {
     position: absolute;
     bottom: 20px;
@@ -77,27 +80,28 @@ body {
     background-color: #45a049;
 }
 
+/* Estilos para dispositivos pequeños */
 @media (max-width: 768px) {
     .document-container {
-        width: 95%; 
-        max-width: 95%; 
+        width: 95%; /* Aumenta el ancho en pantallas pequeñas */
+        max-width: 95%; /* No debe superar el 95% del ancho de la pantalla */
     }
 
     .overlay-button {
-        padding: 8px 16px; 
-        font-size: 14px; 
+        padding: 8px 16px; /* Ajusta el tamaño del botón */
+        font-size: 14px;  /* Reduce el tamaño del texto */
     }
 }
 
-
+/* Estilos para móviles muy pequeños */
 @media (max-width: 480px) {
     .document-container {
-        width: 100%; 
-        max-height: 99%; 
+        width: 100%; /* Se ajusta al 100% del ancho en pantallas más pequeñas */
+        max-height: 99%; /* Limita la altura en pantallas más pequeñas */
     }
 
     .overlay-button {
-        padding: 6px 12px; 
-        font-size: 12px;  
+        padding: 6px 12px; /* Ajusta el tamaño del botón */
+        font-size: 12px;  /* Reduce aún más el tamaño del texto */
     }
 }
