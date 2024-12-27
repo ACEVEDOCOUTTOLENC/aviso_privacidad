@@ -42,7 +42,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: auto;  /* Permite el desplazamiento si el documento es más grande que la ventana */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para mejorar la apariencia */
+    
 }
 
 /* Contenedor donde se agregan las páginas del PDF */
