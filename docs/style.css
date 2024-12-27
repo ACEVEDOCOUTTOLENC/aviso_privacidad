@@ -56,7 +56,11 @@ body {
 .pdf-page {
     width: 100%;
     margin: 20px 0; /* Espaciado entre las páginas */
-    background-color: #e0e0e0;; /* Fondo blanco para cada página */
+    background-color: #808080; /* Gris fuerte */
+    border: 1px solid #000; /* Borde negro delgado */
+    border-radius: 5px; /* Bordes ligeramente redondeados para dar un aspecto más suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para dar la apariencia de profundidad */
+    padding: 10px; /* Espacio dentro del borde */
 }
 
 /* Estilo para el botón de cierre */
