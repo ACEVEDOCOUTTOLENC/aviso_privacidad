@@ -50,6 +50,7 @@ body {
     overflow-y: scroll; /* Permite el desplazamiento vertical */
     height: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible */
     padding: 10px;  /* Añade espacio alrededor de las páginas */
+    background-color: #e0e0e0;
 }
 
 /* Canvas donde se renderiza cada página del PDF */
